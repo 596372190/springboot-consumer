@@ -10,7 +10,10 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class SpringbootConsumerApplication {
 
-    @Reference(url = "dubbo://192.168.56.1:20880/com.gupaoedu.book.dubbo.IHelloService")
+    //该注解还没有注册中心时使用
+    //@Reference(url = "dubbo://192.168.56.1:20880/com.gupaoedu.book.dubbo.IHelloService")
+    //有注册中心了可不用后续url
+    @Reference
     private IHelloService helloService;
 
 
